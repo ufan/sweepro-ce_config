@@ -9,7 +9,7 @@
 };
 
 / { 
-#include "key-common.dtsi"
+  #include "key-common.dtsi"
 
     keymap {
         compatible = "zmk,keymap";
