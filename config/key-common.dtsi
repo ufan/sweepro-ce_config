@@ -38,6 +38,12 @@
         bindings = <&kp LA(M) &kp N3>;
       )
 
+      ZMK_MACRO(spc4,
+        wait-ms = <0>;
+        tap-ms  = <10>;
+        bindings = <&kp LA(M) &kp N4>;
+      )
+
       ZMK_MACRO(nxt_tab,
         wait-ms = <0>;
         tap-ms  = <10>;
