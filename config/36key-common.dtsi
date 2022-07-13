@@ -1,8 +1,10 @@
-
 #define DEFAULT 0
 #define COLEMAK 1
 #define NUM     2
 #define SYM     3
+#define FUN     4
+
+#include "key-common.dtsi"
 
 &mt {
    flavor = "tap-preferred";
@@ -10,7 +12,6 @@
 };
 
 / { 
-  #include "key-common.dtsi"
 
     keymap {
         compatible = "zmk,keymap";
@@ -18,23 +19,23 @@
      		default_layer {
             label = "QWRT";
         		bindings = <
-            		&kp Q &kp W      &kp E     &kp R     &kp T    &kp Y &kp U     &kp I      &kp O       &kp P
-             		&kp A &mt LSFT S &lt SYM D &lt NUM F &kp G    &kp H &lt NUM J &lt SYM K  &mt RSFT L  &kp SQT 
-                &kp Z &kp X      &kp C     &kp V     &kp B    &kp N &kp M     &cmqus     &dtild      &kp SEMI
-                    &encoder  &mt LALT TAB  &mt LCTL SPACE    &mt RCTL RET    &mt RALT BSPC &encoder
+            		&kp Q &kp W      &kp E      &kp R      &kp T        &kp Y     &kp U      &kp I       &kp O       &kp P
+             		&kp A &mt LSFT S &mt LALT D &mt LCTL T &lt NUM G    &lt NUM H &mt RCTL J &mt RALT K  &mt RSFT L  &kp SQT 
+                &kp Z &kp X      &kp C      &kp V      &kp B        &kp N     &kp M      &cmqus      &dtsmi      &kp RC(B)
+                    &encoder     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &encoder
              		>;
-                sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 		    };
 
      		colemak_layer {
             label = "CLMK";
         		bindings = <
-            		&kp Q &kp W      &kp F     &kp P     &kp B    &kp J &kp L     &kp U     &kp Y      &kp SQT
-             		&kp A &mt LSFT R &lt SYM S &lt NUM T &kp G    &kp M &lt NUM N &lt SYM E &mt RSFT I &kp O
-                &kp Z &kp X      &kp C     &kp D     &kp V    &kp K &kp H     &cmqus    &dtild     &kp SEMI
-                    &encoder  &mt LALT TAB  &mt LCTL SPACE    &mt RCTL RET    &mt RALT BSPC  &encoder
+            		&kp Q &kp W      &kp F      &kp P      &kp B        &kp J     &kp L      &kp U      &kp Y      &kp SQT
+             		&kp A &mt LSFT R &mt LALT S &mt LCTL T &lt NUM G    &lt NUM M &mt RCTL N &mt RALT E &mt RSFT I &kp O
+                &kp Z &kp X      &kp C      &kp D      &kp V        &kp K     &kp H      &cmqus     &dtsmi     &kp RC(B)
+                    &encoder     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &encoder
              		>;
-                sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 		    };
 
         number_layer {
@@ -45,7 +46,7 @@
                 &bt BT_CLR  &none     &none     &none      &spc3      &kp KP_EQUAL    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT
                                       &encoder  &spc4      &kp BSPC      &kp RET         &kp KP_N0  &encoder
             >;
-                  sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         symbol_layer {
@@ -56,8 +57,18 @@
                 &none     &none    &kp SLASH &kp STAR &kp BSLH    &kp HASH &kp DLLR  &kp LBKT &kp RBKT &none  
                                       &encoder  &none    &none       &none    &none  &encoder
             >;
-                sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         
+        function_layer {
+            label = "FUN";
+            bindings = <
+                &none  &kp F1  &kp F2  &kp F3  &none       &none &kp F4  &kp F5  &kp F6  &none
+                &none  &kp F7  &kp F8  &kp F9  &none       &none &kp F10 &kp F11 &kp F12 &none
+                &none  &none   &none   &none   &none       &none &none   &none   &none   &none
+                               &none   &none   &none       &none &none   &none
+            >;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
    	};
 };
