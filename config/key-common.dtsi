@@ -6,25 +6,20 @@
 / {
     // macros
     macros {
-    ZMK_MACRO(pass1,
+      ZMK_MACRO(hello, // hello world
         wait-ms = <0>;
         tap-ms  = <10>;
-        bindings = <&kp U &kp F &kp A &kp N>
-                 , <&kp N2 &kp N1 &kp N2 &kp N9>
-                 , <&kp UNDERSCORE>
-                 , <&kp Z &kp H &kp O &kp U &kp Y &kp O &kp N &kp G>;
-    )
+        bindings = <&kp LS(H) &kp E &kp L &kp L &kp O>
+        , <&kp COMMA>
+        , <&kp W &kp O &kp R &kp L &kp D &kp EXCL>;
+      )
 
-    ZMK_MACRO(pass2,
+      ZMK_MACRO(encoder, // for encoder switch press
         wait-ms = <0>;
         tap-ms  = <10>;
-        bindings = <&kp LS(U)>
-                 , <&kp F &kp A &kp N &kp AT>
-                 , <&kp LS(B)>
-                 , <&kp I &kp T &kp W>
-                 , <&kp UNDERSCORE>
-                 , <&kp N2 &kp N1 &kp N2 &kp N9>;
-    )
+        bindings = <&kp LS(I) &kp SPACE &kp A &kp M &kp SPACE &kp A &kp SPACE>
+        , <&kp E &kp N &kp C &kp O &kp D &kp E &kp R>;
+      )
 
       ZMK_MACRO(spc1, // for spacemacs window nav, Alt+M+1
         wait-ms = <0>;
