@@ -20,7 +20,7 @@
             label = "QWRT";
         		bindings = <
             		&kp Q &kp W      &kp E      &kp R      &kp T        &kp Y     &kp U      &kp I       &kp O       &kp P
-             		&kp A &mt LSFT S &mt LALT D &mt LCTL T &lt NUM G    &lt NUM H &mt RCTL J &mt RALT K  &mt RSFT L  &kp SQT 
+             		&kp A &mt LSFT S &mt LALT D &mt LCTL F &lt NUM G    &lt NUM H &mt RCTL J &mt RALT K  &mt RSFT L  &kp SQT 
                 &kp Z &kp X      &kp C      &kp V      &kp B        &kp N     &kp M      &cmqus      &dtsmi      &kp RC(B)
                     &pass1     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &pass2
              		>;
