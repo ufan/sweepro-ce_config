@@ -17,3 +17,5 @@ include:
     shield: sweepro-ce_left
   - board: nrfmacro
     shield: sweepro-ce_right
+  - board: nrfmacro
+    shield: settings_reset
