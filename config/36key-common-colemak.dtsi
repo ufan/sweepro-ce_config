@@ -49,7 +49,7 @@
                 &bt BT_NXT  &mkp MB4  &kp UP    &mkp MB5   &spc1      &kp PLUS     &kp N7 &kp N8 &kp N9 &kp MINUS
                 &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT  &spc2      &kp ASTRK    &kp N4 &kp N5 &kp N6 &kp FSLH
                 &bt BT_CLR  &prv_tab  &none     &nxt_tab      &spc3      &kp EQUAL    &kp N1 &kp N2 &kp N3 &kp DOT
-                                      &pass1  &spc4      &kp HOME   &kp END         &kp KP_N0  &pass2
+                                      &pass1  &spc4      &kp HOME   &kp END         &kp N0  &pass2
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
