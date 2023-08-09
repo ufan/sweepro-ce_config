@@ -1,8 +1,7 @@
 #define DEFAULT 0
-#define COLEMAK 1
-#define NUM     2
-#define SYM     3
-#define FUN     4
+#define NUM     1
+#define SYM     2
+#define FUN     3
 
 #include "key-common.dtsi"
 
@@ -27,16 +26,6 @@
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 		    };
 
-     		colemak_layer {
-            label = "CLMK";
-        		bindings = <
-            		&kp Q &kp W      &kp F      &kp P      &kp B        &kp J     &kp L      &kp U      &kp Y      &kp SQT
-             		&kp A &mt LSFT R &mt LALT S &mt LCTL T &lt NUM G    &lt NUM M &mt RCTL N &mt RALT E &mt RSFT I &kp O
-                &kp Z &kp X      &kp C      &kp D      &kp V        &kp K     &kp H      &cmqus     &dtsmi     &kp RC(B)
-                    &encoder     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &encoder
-             		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
-		    };
 
         number_layer {
             label = "NUM";
