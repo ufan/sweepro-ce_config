@@ -37,8 +37,8 @@
         		bindings = <
             		&kp Q &kp W      &kp F      &kp P      &kp B        &kp J     &kp L      &kp U      &kp Y      &kp SQT
              		&lt SYM A &mt LALT R &mt LSFT S &mt LCTL T &kp G    &kp M &mt RCTL N &mt RSFT E &mt RALT I &lt SYM O 
-                &kp Z &kp X      &kp C      &lt MSE D      &kp V        &kp K     &lt MSE H      &cmqus     &dtsmi     &kp RC(B)
-                          &pass1 &lt FUN TAB    &lt NUM SPACE       &lt NUM RET   &lt FUN BSPC   &pass2
+                &kp Z &kp X      &kp C      &lt MSE D      &kp V        &kp K     &lt MSE H      &cmqus     &dtsmi     &mt LGUI TAB
+                          &name1 &lt FUN BSPC    &lt NUM SPACE       &lt NUM RET   &lt FUN BSPC   &name2
              		>;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 		    };
@@ -48,8 +48,8 @@
             bindings = <
                 &bt BT_NXT  &mkp MB4  &kp UP    &mkp MB5   &spc1      &kp PLUS     &kp N7 &kp N8 &kp N9 &kp MINUS
                 &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT  &spc2      &kp ASTRK    &kp N4 &kp N5 &kp N6 &kp FSLH
-                &bt BT_CLR  &prv_tab  &none     &nxt_tab      &spc3      &kp EQUAL    &kp N1 &kp N2 &kp N3 &kp DOT
-                                      &pass1  &spc4      &kp HOME   &kp END         &kp N0  &pass2
+                &none       &prv_tab  &none     &nxt_tab   &spc3      &kp N0       &kp N1 &kp N2 &kp N3 &kp DOT
+                                      &name1    &spc4   &kp HOME     &kp END      &kp N0  &name2
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -60,7 +60,7 @@
                 &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT   &kp AMPS &kp CARET &kp LBRC &kp RBRC &none
                 &kp GRAVE &kp EXCL  &kp MINUS &kp PLUS &kp EQUAL   &kp PIPE &kp COLON &kp LPAR &kp RPAR &kp AT
                 &none     &none     &kp SLASH &kp STAR &kp BSLH    &kp HASH &kp DLLR  &kp LBKT &kp RBKT &none  
-                                       &pass1  &none    &none    &none    &none  &pass2
+                                       &name1  &none    &none    &none    &none  &name2
             >;
                 sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };

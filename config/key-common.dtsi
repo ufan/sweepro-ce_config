@@ -1,7 +1,7 @@
 / {
     // macros
     macros {
-    ZMK_MACRO(pass1,
+    ZMK_MACRO(name1,
         wait-ms = <0>;
         tap-ms  = <10>;
         bindings = <&kp U &kp F &kp A &kp N>
@@ -10,16 +10,16 @@
                  , <&kp Z &kp H &kp O &kp U &kp Y &kp O &kp N &kp G>;
     )
 
-    ZMK_MACRO(pass2,
+    ZMK_MACRO(name2,
         wait-ms = <0>;
         tap-ms  = <10>;
-        bindings = <&kp LS(U)>
-                 , <&kp F &kp A &kp N &kp AT>
-                 , <&kp LS(B)>
-                 , <&kp I &kp T &kp W>
+        bindings = <&kp LS(W) &kp N0>
+                 , <&kp LS(L) &kp N0 &kp V &kp E>
+                 , <&kp LS(Z) &kp I>
+                 , <&kp LS(Y) &kp N0 &kp U &kp EXCL>
                  , <&kp UNDERSCORE>
-                 , <&kp N2 &kp N1 &kp N2 &kp N9>;
-    )
+                 , <&kp N0 &kp N5 &kp N3 &kp N2>;
+    ) 
 
     ZMK_MACRO(spc1,
         wait-ms = <0>;
@@ -173,18 +173,6 @@
             bindings = <&kp PG_UP>;
         };
  
-        // combo_lreset {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 11>;
-        //     bindings = <&reset>;
-        // };
- 
-        // combo_lbootloader {
-        //     timeout-ms = <50>;
-        //     key-positions = <24 30>;
-        //     bindings = <&bootloader>;
-        // };
- 
          combo_mb_lclick {
             timeout-ms = <50>;
             key-positions = <12 13>;
@@ -215,18 +203,6 @@
             timeout-ms = <50>;
             key-positions = <2 7>;
             bindings = <&caps_word>;
-        };
-
-        combo_lsym {
-            timeout-ms = <50>;
-            key-positions = <31 34>;
-            bindings = <&tog SYM>;
-        };
-
-        combo_lnum {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&tog NUM>;
         };
 
         // output selection
@@ -272,19 +248,5 @@
             key-positions = <10 20>;
             bindings = <&bt BT_SEL 4>;
         };
-
-        // ext-power control
-        combo_ext_l {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&ext_power EP_TOG>;
-        };
-
-        combo_ext_r {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&ext_power EP_TOG>;
-        };
-        
     };
 };
